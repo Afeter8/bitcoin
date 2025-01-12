@@ -1,0 +1,4 @@
+curl --request GET \
+        --url 'https://deep-index.moralis.io/api/v2.2/nft/0x524cab2ec69124574082676e6f654a18df49a048/7603' \
+        --header 'accept: application/json' \
+        --header 'X-API-Key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjNkNTc0OWUwLWIzNGEtNDYxNy1iNDE5LWI3YmVjOGM5MjBhMiIsIm9yZ0lkIjoiNDI1MjkwIiwidXNlcklkIjoiNDM3NDE1IiwidHlwZSI6IlBST0pFQ1QiLCJ0eXBlSWQiOiI5NmFlMmNhYS1iYmYwLTQzNTctYjY3NC1hMTZkODk0OTZlNDIiLCJpYXQiOjE3MzY2Mzc2NTAsImV4cCI6NDg5MjM5NzY1MH0.IAfKoBfAJlCEExSq5Q3IsXWPUKh2uTVw6Plsy07Wz4Q'
