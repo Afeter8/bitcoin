@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Tigo Global System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #1f1f1f;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+        }
+        .secure {
+            border: 2px solid limegreen;
+            padding: 1em;
+            margin-top: 1em;
+            border-radius: 8px;
+        }
+        button {
+            padding: 0.8em 1.2em;
+            background-color: limegreen;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Star Tigo - Sistema Global Descentralizado</h1>
+        <p>Seguridad biométrica | IA Autónoma | Red Global</p>
+    </header>
+
+    <main>
+        <section class="secure">
+            <h2>Acceso Seguro (Simulación Biométrica)</h2>
+            <input type="text" id="userID" placeholder="ID biométrico" />
+            <button onclick="verificarIdentidad()">Acceder</button>
+            <p id="estado"></p>
+        </section>
+
+        <section>
+            <h2>Estado del Nodo</h2>
+            <div id="nodoStatus">Esperando conexión...</div>
+        </section>
+
+        <section>
+            <h2>Red Neuronal IA</h2>
+            <button onclick="simularIA()">Activar IA Descentralizada</button>
+            <pre id="salidaIA"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Star Tigo | Fernando Guadalupe Mendez Espinoza</p>
+    </footer>
+
+    <script>
+        const biometricoPermitido = "Fernando-2025";
+
+        function verificarIdentidad() {
+            const id = document.getElementById("userID").value;
+            const estado = document.getElementById("estado");
+            if (id === biometricoPermitido) {
+                estado.textContent = "Acceso concedido. Bienvenido, Fernando.";
+                estado.style.color = "lime";
+                document.getElementById("nodoStatus").textContent = "Nodo activo y sincronizado globalmente.";
+            } else {
+                estado.textContent = "Acceso denegado. Sistema bloqueado.";
+                estado.style.color = "red";
+                document.getElementById("nodoStatus").textContent = "Amenaza detectada. Nodo bloqueado.";
+            }
+        }
+
+        function simularIA() {
+            const salida = document.getElementById("salidaIA");
+            const datos = {
+                sistemas: ["Finanzas", "Cultura", "Idioma", "Defensa", "Biometría"],
+                idiomas: ["Español", "Inglés", "Chino", "Árabe"],
+                decision: "Activación segura global sin intervención humana"
+            };
+            salida.textContent = JSON.stringify(datos, null, 2);
+        }
+    </script>
+
+    <!-- Simulación de conexión JSON a nodos IA -->
+    <script type="application/json" id="configNodos">
+        {
+            "nodos": ["CDMX", "Nueva York", "Berlín", "Tokio"],
+            "protocolo": "Descentralizado Seguro",
+            "status": "Listo para comunicación global"
+        }
+    </script>
+
+    <!-- Referencia al backend simulado Python (nota para integración real) -->
+    <!--
+    Backend Python (API REST): /api/nodo/
+    Funcionalidad: conexión nodos, IA defensiva, autenticación biométrica
+    -->
+</body>
+</html>
